@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for markdown content */
+.markdown-body {
+  @apply text-base leading-relaxed;
+}
+
+.markdown-body h1 {
+  @apply text-3xl font-bold mb-6 mt-2 pb-2 border-b border-gray-200 dark:border-gray-700;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-bold mt-6 mb-4;
+}
+
+.markdown-body h3 {
+  @apply text-xl font-semibold mt-5 mb-3;
+}
+
+.markdown-body h4 {
+  @apply text-lg font-semibold mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply mb-4 pl-6;
+}
+
+.markdown-body ul {
+  @apply list-disc;
+}
+
+.markdown-body ol {
+  @apply list-decimal;
+}
+
+.markdown-body li {
+  @apply mb-1;
+}
+
+.markdown-body blockquote {
+  @apply pl-4 italic border-l-4 border-gray-300 dark:border-gray-600 my-4 text-gray-600 dark:text-gray-300;
+}
+
+.markdown-body code:not([class*="language-"]) {
+  @apply font-mono text-sm px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded;
+}
+
+.markdown-body pre {
+  @apply mb-4 rounded-lg overflow-auto;
+}
+
+.markdown-body a {
+  @apply text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse mb-4;
+}
+
+.markdown-body th, .markdown-body td {
+  @apply border border-gray-300 dark:border-gray-700 px-4 py-2;
+}
+
+.markdown-body th {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+.markdown-body hr {
+  @apply my-6 border-gray-200 dark:border-gray-700;
+}
+
+/* Animation for toast */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
